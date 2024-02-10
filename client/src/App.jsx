@@ -5,17 +5,19 @@ import Projects from  "./pages/Projects";
 import About from './pages/About';
 import SignIn from "./pages/SignIn";
 import SignUp from './pages/Signup';
+import Header from './components/Header';
 
 export default function Main() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
-        <Route path='/' component={<Home />}/>
-        <Route path='/dashboard' component={<Dashboard />}/>
-        <Route path='/projects' component={<Projects />}/>
-        <Route path='/about' component={<About />}/>
-        <Route path='sing-in' component={<SignIn />}/>
-        <Route path='sign-up' component={<SignUp />}/>
+        <Route path="/" element={<Home />}/>
+        <Route path="/dashboard" element={<Dashboard />}/>
+        <Route path="/projects" element={<Projects />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/sing-in" element={<SignIn />}/>
+        <Route path="/sign-up" element={<SignUp />}/>
         
       </Routes>
     </BrowserRouter>
